@@ -12,8 +12,19 @@ public class listController {
 
     public listController(){
         homeworks = List.of(
+                new Lista("Lavar la ropa "),
+                new Lista("Poner en lavadora"),
+                new Lista("Doblar la ropa")
 
         );
     }
 
+    @GetMapping("/homeworks")
+    public List<Lista> allhomeworks() {
+        return homeworks;
+    }
+
+
 }
+
+
