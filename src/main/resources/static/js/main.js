@@ -12,7 +12,6 @@ function addToList() {
 
 addToDoButton.addEventListener('click', addToList);
 
-let removeHomework = document.createElement
 
 
 
