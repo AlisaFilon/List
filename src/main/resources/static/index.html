@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<form action="/homeworks" method="post">
+    <label for="homework">Homework</label>
+    <input type="text" id="homework" name="homework"/>
+    <input type="submit" id="homework-submit" value="Add">
+</form>
 <h1>List To Do</h1>
-<input id="inputfield" type="text"><button id="addhomework">add</button>
-<div id="container">
-    <ul id="lista-ul"></ul>
-</div>
-
+<section id="homework-section"></section>
 </body>
 <script src="js/main.js"></script>
 </html>
