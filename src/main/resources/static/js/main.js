@@ -6,10 +6,6 @@ function showHomeworks(text) {
             <p class="toDo">${Lista.homework}</p>
         </div>`;
         homeworksSection.insertAdjacentHTML("beforeend", element)
-        element.addEventListener('click', function(){
-            homeworksSection.removeChild(element);
-        })
-
     })
  }
 
