@@ -9,14 +9,6 @@ function showHomeworks(text) {
     })
  }
 
- function loadRequest(){
-    fetch("/homeworks")
-        .then(response => response.json())
-        .then(showHomeworks)
- };
-
-document.addEventListener("DOMContentLoaded", loadRequest);
-
 const toDoInput = document.getElementById("homework");
 
 const submitButton = document.getElementById("homework-submit");
@@ -31,6 +23,16 @@ const validateHomework = (event) => {
         submitButton.disabled = false;
     }
 }
+
+ function loadRequest(){
+    fetch("/homeworks")
+        .then(response => response.json())
+        .then(showHomeworks)
+ };
+
+document.addEventListener("DOMContentLoaded", loadRequest);
+
+
 
 
 
