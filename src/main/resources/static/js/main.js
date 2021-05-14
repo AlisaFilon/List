@@ -1,23 +1,22 @@
-let addToDoButton = document.getElementById('addhomework');
-let ToDoListaUl = document.getElementById('lista-ul');
-let inputField = document.getElementById('inputfield');
+const homeworksSection = document.querySelector("#homework-section");
 
-
-function addToList() {
-
-    let doing = document.createElement('li');
-    doing.innerText = inputField.value;
-    ToDoListaUl.appendChild(doing);
-    inputField.value = "";
+function showHomeworks(text) {
+    text.forEach(Lista => {
+        const element = `<div class="tarea">
+            <p class="toDo">${Lista.homework}</p>
+        </div>`;
+        homeworksSection.insertAdjacentHTML("beforeend", element)
+    })
  }
 
  function loadRequest(){
     fetch("/homeworks")
         .then(response => response.json())
-        .then(addToList)
- }
- document.addEventListener("DOMContentLoaded", loadRequest);
-addToDoButton.addEventListener('click', addToList);
+        .then(showHomeworks)
+ };
+
+document.addEventListener("DOMContentLoaded", loadRequest);
+
 
 
 
