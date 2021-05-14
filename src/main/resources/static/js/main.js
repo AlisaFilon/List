@@ -9,6 +9,16 @@ function showHomeworks(text) {
     })
  }
 
+ function loadRequest(){
+    fetch("/homeworks")
+        .then(response => response.json())
+        .then(showHomeworks)
+
+
+ };
+
+document.addEventListener("DOMContentLoaded", loadRequest);
+
 const toDoInput = document.getElementById("homework");
 
 const submitButton = document.getElementById("homework-submit");
@@ -16,21 +26,12 @@ const submitButton = document.getElementById("homework-submit");
 const validateHomework = (event) => {
     const homework = event.target.value;
     if (homework.length < 3) {
-        toDoInput.style.border = "2px solid red";
         submitButton.disabled = true;
     } else {
-        toDoInput.style.border = "";
         submitButton.disabled = false;
     }
 }
-
- function loadRequest(){
-    fetch("/homeworks")
-        .then(response => response.json())
-        .then(showHomeworks)
- };
-
-document.addEventListener("DOMContentLoaded", loadRequest);
+toDoInput.addEventListener("input" , validateHomework);
 
 
 
