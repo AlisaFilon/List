@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", loadRequest);
 
 const toDoInput = document.getElementById("homework");
 
-const submitButton = document.getElementById("homework-submit");
 
+
+const submitButton = document.getElementById("homework-submit");
 const validateHomework = (event) => {
     const homework = event.target.value;
     if (homework.length < 3) {
@@ -32,6 +33,8 @@ const validateHomework = (event) => {
     }
 }
 toDoInput.addEventListener("input" , validateHomework);
+
+
 
 
 
