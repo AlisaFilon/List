@@ -11,14 +11,12 @@ import java.util.List;
 @RestController
 public class listController {
 
-    private ArrayList<Lista> homeworks;
-
-    public listController() {
-        homeworks = new ArrayList<>();
-    }
+    private final List<Lista> homeworks = new ArrayList<>();
 
     @GetMapping("/homeworks")
-    public ArrayList<Lista> allhomeworks() { return homeworks; }
+    public List<Lista> allhomeworks() {
+        return homeworks;
+    }
 
     @PostMapping("/homeworks")
     public RedirectView addNewHomework(Lista homework) {

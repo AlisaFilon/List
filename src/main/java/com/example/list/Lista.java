@@ -8,6 +8,8 @@ public class Lista {
         this.homework = homework;
     }
 
-    public String getHomework() { return homework; }
+    public String getHomework() {
+        return homework;
+    }
 
 }
