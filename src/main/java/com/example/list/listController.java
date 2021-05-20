@@ -9,16 +9,16 @@ import java.util.List;
 @RestController
 public class listController {
 
-    private final List<Lista> homeworks = new ArrayList<>();
+    private final List<Homework> homeworks = new ArrayList<>();
 
     @GetMapping("/homeworks")
-    public List<Lista> allHomeworks() {
+    public List<Homework> allHomeworks() {
         return homeworks;
     }
 
     @PostMapping("/homeworks")
-    public RedirectView addNewHomework(Lista lista) {
-        homeworks.add(lista);
+    public RedirectView addNewHomework(Homework homework) {
+        homeworks.add(homework);
         return new RedirectView("/");
     }
 
