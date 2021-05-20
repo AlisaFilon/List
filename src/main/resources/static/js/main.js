@@ -1,15 +1,15 @@
 const homeworksSection = document.querySelector("#homework-section");
 
 function showHomeworks(homeworks) {
-    homeworksSection.innerHTML = "";
+  //  homeworksSection.innerHTML = "";
     homeworks.forEach((lista, position) => {
         const htmlElement = document.createElement("div");
         htmlElement.innerHTML = `<div class="tarea">
             <div class="close-button"
-            onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)">x</div>
+            onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)"></div>
             <p class="toDo">${lista.homework}</p>
         </div>`;
-        homeworksSection.appendChild("beforeend", htmlElement)
+        homeworksSection.appendChild(htmlElement)
     })
  }
 
@@ -19,7 +19,7 @@ function showHomeworks(homeworks) {
         .then(showHomeworks)
  };
 
-document.addEventListener("DOMContentLoaded", reloadHomeworks());
+document.addEventListener("DOMContentLoaded", reloadHomeworks);
 
 
 
