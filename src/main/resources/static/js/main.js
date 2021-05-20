@@ -1,29 +1,31 @@
 const homeworksSection = document.querySelector("#homework-section");
 
-function showHomeworks(text) {
-    text.forEach(Lista => {
-        const element = `<div class="tarea">
+function showHomeworks(homeworks) {
+    homeworksSection.innerHTML = "";
+    homeworks.forEach(Lista, position) => {
+        const htmlElement = document.createElement("div");
+        htmlElement.innerHTML = `<div class="tarea">
+            <div class="close-button"
+            onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)">x</div>
             <p class="toDo">${Lista.homework}</p>
         </div>`;
-        homeworksSection.insertAdjacentHTML("beforeend", element)
-    })
+        homeworksSection.appenChild(htmlElement)
+    }
  }
 
- function loadRequest(){
+ let reloadHomeworks = () => {
     fetch("/homeworks")
-        .then(response => response.json())
+        .then(r => r.json())
         .then(showHomeworks)
-
-
  };
 
-document.addEventListener("DOMContentLoaded", loadRequest);
+document.addEventListener("DOMContentLoaded", reloadHomeworks());
+
+
 
 const toDoInput = document.getElementById("homework");
-
-
-
 const submitButton = document.getElementById("homework-submit");
+
 const validateHomework = (event) => {
     const homework = event.target.value;
     if (homework.length < 3) {
@@ -33,7 +35,6 @@ const validateHomework = (event) => {
     }
 }
 toDoInput.addEventListener("input" , validateHomework);
-
 
 
 
