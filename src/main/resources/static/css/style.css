@@ -1,43 +1,67 @@
-/*content {
-    position: relative;
-    width: 414px;
-    height: 736px;
+body {
     background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 3vh;
 }
-.banner {
-    position: absolute;
-    width: 414px;
-    height: 78px;
-    left: 0px;
-    top: 0px;
-
+header {
     background: #E1701A;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 10vh;
+    width: 100%;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+    border: 5px solid #E1701A ;
 }
-.footer {
+.refresh {
+    height: 5vh;
+    width: 5vh;
+    padding: 2vh 0vh 0vh 2vh;
+}
+main {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5vh;
+}
+footer {
+    background: #eeebeb;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    position: absolute;
-    width: 414px;
-    height: 71px;
-    left: 0px;
-    top: 665px;
-    background: #FBFBFB;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.input {
-    position: absolute;
-    width: 332px;
-    height: 48px;
-    left: 29px;
-    top: 677px;
-    background: #FFFFFF;
+#homework {
+    height: 9vh;
+    width: 53vh;
+    border-radius: 3vh;
+    border: #eeebeb solid;
+    color: darkgray;
+    font-size: 3vh;
 }
-.add {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    left: 367px;
-    top: 684px;
-    background: #F7A440;
+#homework:focus {
+    outline: none;
 }
-*/
+#homework-submit {
+    height: 9vh;
+    width: 9vh;
+    border-radius: 4vh;
+    background:#E1701A;
+    color: #FFFFFF;
+    font-size: 5vh;
+    border: #E1701A solid;
+    text-align: center;
+}
+.close-button {
+    height:10px;
+    width: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.close-button:hover {
+    background: #e5e3e3;
+}

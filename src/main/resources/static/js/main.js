@@ -5,11 +5,10 @@ function showHomeworks(homeworks) {
     homeworks.forEach((lista, position) => {
         const htmlElement = document.createElement("div");
         htmlElement.innerHTML = `<div class="tarea">
-            <div 
-                class="close-button"
-                onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)">Complete</div>
-            <p class="toDo">${lista.task}</p>
-        </div>`;
+            <div class="close-button"
+                onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)"></div>
+                 <p class="toDo">${lista.task}</p>
+            </div>`;
         homeworksSection.appendChild(htmlElement)
     })
  }
@@ -37,7 +36,7 @@ const validateHomework = (event) => {
 }
 toDoInput.addEventListener("input" , validateHomework);
 
-
+381
 
 
 

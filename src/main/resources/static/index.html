@@ -6,13 +6,20 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form action="/homeworks" method="post">
-    <label for="homework">Homework</label>
-    <input type="text" id="homework" name="task"/>
-    <input type="submit" id="homework-submit" value="Add" disable/>
-</form>
-<h1>List To Do</h1>
-<section id="homework-section"></section>
+    <header>
+        <nav class="top">
+            <img src="css/img/refresh.png" class="refresh" type="value" onclick="location.reload()">
+        </nav>
+    </header>
+    <main>
+         <section id="homework-section"></section>
+    </main>
+    <footer>
+          <form action="/homeworks" method="post">
+              <input type="text" id="homework" required placeholder="I want to..." name="task"/>
+              <input type="submit" id="homework-submit" value="+" disable/>
+         </form>
+    </footer>
 </body>
 <script src="js/main.js"></script>
 </html>
