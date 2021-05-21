@@ -7,7 +7,7 @@ function showHomeworks(homeworks) {
         htmlElement.innerHTML = `<div class="tarea">
             <div 
                 class="close-button"
-                onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)">x</div>
+                onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)">Complete</div>
             <p class="toDo">${lista.task}</p>
         </div>`;
         homeworksSection.appendChild(htmlElement)
