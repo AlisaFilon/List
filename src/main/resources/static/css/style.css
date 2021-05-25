@@ -15,10 +15,20 @@ header {
     padding: 0;
     border: 5px solid #E1701A ;
 }
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .refresh {
     height: 5vh;
     width: 5vh;
     padding: 2vh 0vh 0vh 2vh;
+}
+.menu {
+    height: 6vh;
+    width: 6vh;
+    padding: 2vh 2vh 0vh 2vh;
 }
 main {
     height: 75vh;
@@ -69,3 +79,14 @@ footer {
     display: flex;
     align-items: center;
 }
+/* completed items */
+.arrow {
+    filter: invert(7) sepia(1);
+    height: 5vh;
+    width: 6vh;
+    padding: 2vh 1vh 1vh 2vh;
+}
+.completed {
+    color: #FFFFFF;
+}
+
