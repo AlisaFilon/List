@@ -23,7 +23,7 @@ header {
 main {
     height: 75vh;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     padding: 5vh;
 }
 footer {
