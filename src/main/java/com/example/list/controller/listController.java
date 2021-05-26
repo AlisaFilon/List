@@ -1,5 +1,6 @@
-package com.example.list;
+package com.example.list.controller;
 
+import com.example.list.models.Homework;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 

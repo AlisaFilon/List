@@ -86,9 +86,11 @@ footer {
     filter: invert(7) sepia(1);
     height: 5vh;
     width: 6vh;
-    padding: 2vh 1vh 1vh 2vh;
+    padding: 3vh 1vh 1vh 2vh;
 }
 .completed {
     color: #FFFFFF;
+    height: 3vh;
+    margin: auto;
 }
 
