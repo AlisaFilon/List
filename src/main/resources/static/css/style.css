@@ -5,6 +5,8 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 3vh;
     width: 100%;
+    position:fixed;
+
 }
 header {
     background: #E1701A;
@@ -31,7 +33,7 @@ header {
     padding: 2vh 2vh 0vh 2vh;
 }
 main {
-    height: 75vh;
+    height: 65vh;
     display: flex;
     align-items: baseline;
     padding: 5vh;
@@ -46,7 +48,7 @@ footer {
 }
 #homework {
     height: 9vh;
-    width: 42vh;
+    width: 40vh;
     border-radius: 3vh;
     border: #eeebeb solid;
     color: darkgray;
