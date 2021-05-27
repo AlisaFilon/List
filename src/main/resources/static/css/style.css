@@ -47,25 +47,27 @@ footer {
 
 }
 #homework {
-    height: 9vh;
-    width: 40vh;
+    height: 6vh;
+    width: 30vh;
     border-radius: 3vh;
     border: #eeebeb solid;
     color: darkgray;
     font-size: 3vh;
+    margin: auto;
 }
 #homework:focus {
     outline: none;
 }
 #homework-submit {
-    height: 7vh;
-    width: 7vh;
+    height: 6vh;
+    width: 6vh;
     border-radius: 4vh;
     background:#E1701A;
     color: #FFFFFF;
-    font-size: 5vh;
+    font-size: 3vh;
     border: #E1701A solid;
     text-align: center;
+    margin: auto;
 }
 .close-button {
     height: 2vh;
