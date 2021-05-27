@@ -1,4 +1,4 @@
-package com.example.list.models;
+package com.example.list;
 
 public class Homework {
 

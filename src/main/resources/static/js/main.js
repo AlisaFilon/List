@@ -2,15 +2,15 @@ const homeworksSection = document.querySelector("#homework-section");
 
 function showHomeworks(homeworks) {
     homeworksSection.innerHTML = "";
-    homeworks.forEach((lista, position) => {
+    for (let [id, homework] of Object.entries(homeworks)){
         const htmlElement = document.createElement("div");
         htmlElement.innerHTML = `<div class="tarea">
             <div class="close-button"
-                onclick="fetch(\`/homeworks/${position}\`, {method: 'DELETE'}).then(reloadHomeworks)"></div>
-                 <p class="toDo">${lista.task}</p>
+                onclick="fetch(\`/homeworks/${id}\`, {method: 'DELETE'}).then(reloadHomeworks)"></div>
+                 <p class="toDo">${homework.task}</p>
             </div>`;
         homeworksSection.appendChild(htmlElement)
-    })
+    }
  }
 
  let reloadHomeworks = () => {
